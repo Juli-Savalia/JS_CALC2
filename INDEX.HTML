@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calc2 js</title>
+    <style>
+        .container{
+            max-width: 1140px;
+            margin: 0 auto;
+        }
+        .p-100{
+            padding: 100px 0;
+        }
+        table{
+            width: 400px;
+        }
+        #ans{
+            height: 60px;
+            background: transparent;
+            width: 100%;
+            border: 0;
+            outline: none;
+            font-size: 30px;
+            color: aliceblue;
+            margin: 0 auto;
+        }
+        .flex{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        button{
+            height: 80px;
+            width: 80px;
+            background: #354357;
+            border: 0;
+            color: white;
+            font-size: 30px;
+            font-weight: 700;
+            transition: all 0.5s;
+        }
+        button:hover{
+            background-color: rgb(255, 247, 236);
+            color: #1d293a;
+        }
+        td{
+            padding:5px 0;
+        }
+        tr:last-child td  button:first-child{
+           width: 190px;
+        }
+    </style>
+</head>
+
+<body style="background-color: #1d293a;">
+    <section class="p-100">
+        <div class="container">
+
+            <h1 align="center" style="color: aliceblue;">TRY ME NOW !</h1>
+
+            <form id="calc">
+                <table align="center">
+                    <tr>
+                        <td>
+                            <input type="text" id="ans" style="text-align: right;">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="flex">
+                            <button type="button" onclick="calc.ans.value = calc.ans.value.slice(0,calc.ans.value.length-1)">C</button>
+                            <button type="button" onclick="calc.ans.value =' '">AC</button>
+                            <button type="button" onclick="calc.ans.value+='9'">%</button>
+                            <button type="button" onclick="calc.ans.value+='x'">/</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="flex">
+                            <button type="button" onclick="calc.ans.value+='7'">7</button>
+                            <button type="button" onclick="calc.ans.value+='8'">8</button>
+                            <button type="button" onclick="calc.ans.value+='9'">9</button>
+                            <button type="button" onclick="calc.ans.value+='*'">x</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="flex">
+                            <button type="button" onclick="calc.ans.value+='4'">4</button>
+                            <button type="button" onclick="calc.ans.value+='5'">5</button>
+                            <button type="button" onclick="calc.ans.value+='6'">6</button>
+                            <button type="button" onclick="calc.ans.value+='-'">-</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="flex">
+                            <button type="button" onclick="calc.ans.value+='1'">1</button>
+                            <button type="button" onclick="calc.ans.value+='2'">2</button>
+                            <button type="button" onclick="calc.ans.value+='3'">3</button>
+                            <button type="button" onclick="calc.ans.value+='+'">+</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="flex">
+                            <button type="button" onclick="calc.ans.value+='0'">0</button>
+                            <button type="button" onclick="calc.ans.value+='.'">.</button>
+                            <button type="button" onclick="calc.ans.value = eval(calc.ans.value)">=</button>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </section>
+</body>
+
+</html>
